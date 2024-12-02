@@ -114,6 +114,35 @@ nav a:hover {
   color: #555;
 }
 
+.recommand {
+  text-align: center;
+  margin: 15px;
+  padding: 15px;
+  background-color: #acd6ae;
+}
+
+.seoul-recommand {
+  margin: 5px;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.region-recommand {
+  margin: 5px;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #1b5a6a;
+  cursor: pointer;
+}
+
+.theme-recommand {
+  margin: 5px;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #1b5a6a;
+  cursor: pointer;
+}
+
 footer {
   background-color: #333;
   color: white;
