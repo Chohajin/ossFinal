@@ -1,86 +1,125 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
-  }
-  nav {
-    display: flex;
-    justify-content: center;
-    background-color: #333;
-  }
-  nav a {
-    color: white;
-    padding: 14px 20px;
-    text-decoration: none;
-    text-align: center;
-  }
-  nav a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-  .search-container {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-  }
-  .search-container input[type="text"] {
-    width: 50%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px 0 0 4px;
-  }
-  .search-container button {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #4CAF50;
-    background-color: #4CAF50;
-    color: white;
-    border-radius: 0 4px 4px 0;
-    cursor: pointer;
-  }
-  .search-container button:hover {
-    background-color: #45a049;
-  }
-  .content {
-    padding: 20px;
-  }
-  .restaurant-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-  .restaurant {
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    width: 30%;
-    margin: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  }
-  .restaurant img {
-    width: 100%;
-    border-bottom: 1px solid #ddd;
-  }
-  .restaurant h3 {
-    margin: 10px;
-  }
-  .restaurant p {
-    margin: 10px;
-    color: #555;
-  }
-  footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-  }
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  display: flex; /* 추가: Flexbox로 정렬 */
+  align-items: center; /* 수직 정렬 */
+  justify-content: space-between; /* 제목과 검색창을 양쪽으로 배치 */
+}
+
+.title {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0; /* margin 제거 */
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #333;
+}
+
+nav a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+nav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.search-container {
+  display: flex;
+  align-items: center; /* 수직 정렬 */
+  margin-left: auto; /* 제목에서 떨어뜨리기 */
+}
+
+.search-container input[type="text"] {
+  width: 300px; /* 적당한 너비 설정 */
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+}
+
+.search-container button {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #4CAF50;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+.search-container button:hover {
+  background-color: #45a049;
+}
+
+.login button {
+  padding: 10px;
+  margin: 5px;
+  font-weight: bold;
+  font-size: 16px;
+  border: 1px solid #66aacc;
+  background-color: #66aacc;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login button:hover {
+  background-color: #3131b6;
+}
+
+.content {
+  padding: 20px;
+}
+
+.restaurant-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.restaurant {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 30%;
+  margin: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.restaurant img {
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+}
+
+.restaurant h3 {
+  margin: 10px;
+}
+
+.restaurant p {
+  margin: 10px;
+  color: #555;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}

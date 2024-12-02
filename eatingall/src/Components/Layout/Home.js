@@ -8,14 +8,7 @@ const Home = () => {
       <div>
         <Body />
       </div>
-      <a
-        href="https://github.com/Chohajin"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="centered-link"
-      >
-        Hajin Cho's Github (click here)
-      </a>
+      
     </div>
   )
 };
