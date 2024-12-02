@@ -1,161 +1,77 @@
-/* 기본 스타일 */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+import React, { useEffect, useState } from 'react';
+import './Common.css';
 
-/* 헤더 스타일 */
-.header-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px 20px;
-}
+const Body = () => {
+  const [restaurants, setRestaurants] = useState([]);
+  const [error, setError] = useState(null);
 
-.title {
-  font-size: 24px;
-  font-weight: bold;
-  text-decoration: none;
-  color: white;
-}
+  const API_URL = "http://apis.data.go.kr/6260000/FoodService/getFoodKr";
+  const API_KEY = "tZ8%2BBiaaU1zFRCLRmv119pWkvT%2FsGdT2PBKdKaz3XVAQaEXlW9OYyvrOjlAojAcPC2N30Z83cW1%2FGg7Y0ox68g%3D%3D";
 
-.search-container {
-  display: flex;
-  align-items: center;
-}
+  useEffect(() => {
+    const fetchRestaurants = async () => {
+      try {
+        const response = await fetch(`${API_URL}?serviceKey=${API_KEY}&numOfRows=10&pageNo=1&resultType=json`);
+        if (!response.ok) {
+          throw new Error(`HTTP 오류 발생: ${response.status}`);
+        }
+        const data = await response.json();
+        if (data.getFoodKr && data.getFoodKr.item) {
+          setRestaurants(data.getFoodKr.item);
+        } else {
+          setError("조건에 맞는 데이터가 없습니다.");
+        }
+      } catch (err) {
+        setError("데이터를 불러오는 중 오류가 발생했습니다.");
+      }
+    };
 
-.search-container input[type="text"] {
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px 0 0 4px;
-}
+    fetchRestaurants();
+  }, []);
 
-.search-container button {
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #4CAF50;
-  background-color: #4CAF50;
-  color: white;
-  border-radius: 0 4px 4px 0;
-  cursor: pointer;
-}
+  return (
+    <>
+        <div className="recommand">
+        <p className="seoul-recommand">서울 추천 맛집</p> <br/>
+        <a className="region-recommand">지역별</a>
+        <a className="theme-recommand">테마별</a>
+        </div>
 
-.search-container button:hover {
-  background-color: #45a049;
-}
+        <div className="content">
+        <h2>추천 맛집</h2>
+            <div className="restaurant-list">
+                {error ? (
+                <p>{error}</p>
+                ) : (
+                restaurants.map((restaurant, index) => (
+                    <div key={index} className="restaurant">
+                    <h3>{restaurant.MAIN_TITLE || "이름 정보 없음"}</h3>
+                    <img src={restaurant.MAIN_IMG_NORMAL || ""} alt={restaurant.MAIN_TITLE || "이미지 없음"} />
+                    <p>{restaurant.ITEMCNTNTS || "설명 정보 없음"}</p>
+                    </div>
+                ))
+                )}
+            </div>
+        </div>
 
-.login button {
-  padding: 10px;
-  font-size: 16px;
-  border: none;
-  background-color: #333;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
-}
+        <div className="content">
+        <h2>좋아요 수 맛집</h2>
+            <div className="restaurant-list">
+                {error ? (
+                <p>{error}</p>
+                ) : (
+                restaurants.map((restaurant, index) => (
+                    <div key={index} className="restaurant">
+                    <h3>{restaurant.MAIN_TITLE || "이름 정보 없음"}</h3>
+                    <img src={restaurant.MAIN_IMG_NORMAL || ""} alt={restaurant.MAIN_TITLE || "이미지 없음"} />
+                    <p>{restaurant.ITEMCNTNTS || "설명 정보 없음"}</p>
+                    </div>
+                ))
+                )}
+            </div>
+        </div>
+    </>
+  );
+};
 
-.login button:hover {
-  background-color: #555;
-}
-
-/* 내비게이션 스타일 */
-.nav {
-  display: flex;
-  justify-content: center;
-  background-color: #333;
-}
-
-.nav a {
-  color: white;
-  padding: 14px 20px;
-  text-decoration: none;
-  text-align: center;
-}
-
-.nav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-/* Body 스타일 */
-.content {
-  padding: 20px;
-}
-
-.restaurant-list {
-  display: flex;
-  overflow-x: auto;
-  padding: 20px;
-  gap: 10px;
-}
-
-.restaurant {
-  margin: 10px;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  width: 250px;
-  flex-shrink: 0;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.restaurant img {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
-}
-
-.restaurant h3 {
-  margin: 10px 0;
-  text-align: center;
-}
-
-.restaurant p {
-  margin: 5px 0;
-  color: #555;
-}
-
-/* 푸터 스타일 */
-.footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 10px 0;
-  position: relative;
-  width: 100%;
-  bottom: 0;
-}
-
-.recommand {
-  text-align: center;
-  margin: 15px;
-  padding: 15px;
-  background-color: #acd6ae;
-}
-
-.seoul-recommand {
-  margin: 5px;
-  font-weight: bold;
-  font-size: 25px;
-}
-
-.region-recommand {
-  margin: 5px;
-  padding: 10px;
-  border-radius: 8px;
-  background-color: #1b5a6a;
-  cursor: pointer;
-}
-
-.theme-recommand {
-  margin: 5px;
-  padding: 10px;
-  border-radius: 8px;
-  background-color: #1b5a6a;
-  cursor: pointer;
-}
+export default Body;
