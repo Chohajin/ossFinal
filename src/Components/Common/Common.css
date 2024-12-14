@@ -69,8 +69,11 @@ body {
 
 .user-login-container {
   display: flex;
+  /* Flexbox 적용 */
   align-items: center;
+  /* 수직 가운데 정렬 */
   gap: 10px;
+  /* 버튼 간 간격 추가 */
 }
 
 .user button,
@@ -129,6 +132,7 @@ body {
   gap: 15px;
 }
 
+
 .restaurant-list::-webkit-scrollbar {
   height: 8px;
 }
@@ -169,6 +173,12 @@ body {
   margin: 5px 0;
   color: #555;
   font-size: 13px;
+}
+.actions button{
+  margin: 5px;
+  background-color: #ffe46d26;
+  border-radius: 5px;
+  border: 1px solid #818181;
 }
 
 .recommand {
@@ -228,13 +238,6 @@ body {
 .theme-recommand:hover {
   background-color: #89b7c3;
   color: #000000;
-}
-
-.actions button {
-  margin: 5px;
-  background-color: #d3bc4a2a;
-  border-radius: 5px;
-  border: 1px solid #0f2e08;
 }
 
 /* 푸터 스타일 */

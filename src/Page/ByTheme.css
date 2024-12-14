@@ -1,7 +1,11 @@
 .bytheme-container {
   display: flex;
   font-family: Arial, sans-serif;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
 }
+
 
 .bytheme-container .layout {
   display: flex;
@@ -79,7 +83,7 @@
   margin-top: 90px;
   width: 82%;
   padding: 30px;
-  overflow-y: auto;
+  height: 600px;
 }
 
 .bytheme-container .restaurant {
@@ -98,13 +102,13 @@
 
 .bytheme-container .restaurant img {
   max-width: 100%;
-  max-height: 300px;
+  max-height: 400px;
   height: auto;
   border-radius: 5px;
 }
 
 .bytheme-container .restaurant h3 {
-  margin: 10px 0;
+  margin: 5px 0;
   color: #222;
   font-size: 1.1rem;
   font-weight: bold;
