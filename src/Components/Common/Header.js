@@ -47,15 +47,17 @@ export default function Header() {
         </div>
       </header>
       <nav className="nav">
-
-        <Link to="/Notice" className="nav-link">
-          공지사항
+        <Link to="/Page/pageIntro" className="nav-link">
+          페이지 소개
         </Link>
         <Link to="/Page/ByRegion" className="nav-link">
           부산 지역별 맛집 찾기
         </Link>
         <Link to="/Page/ByTheme" className="nav-link">
           부산 테마별 맛집 찾기
+        </Link>
+        <Link to="/Notice" className="nav-link">
+          공지사항
         </Link>
         <Link to="/Faq" className="nav-link">
           FAQ

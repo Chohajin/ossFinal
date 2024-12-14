@@ -230,6 +230,13 @@ body {
   color: #000000;
 }
 
+.actions button {
+  margin: 5px;
+  background-color: #d3bc4a2a;
+  border-radius: 5px;
+  border: 1px solid #0f2e08;
+}
+
 /* 푸터 스타일 */
 .footer {
   background-color: #333;

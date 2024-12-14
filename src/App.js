@@ -29,7 +29,8 @@ function App() {
         <Route path="/faq" element={<Faq />} />
         <Route path="/body" element={<Body />} />
         <Route path="/detail/:id" element={<Detail />} />
-        <Route path="/bytheme" element={<ByTheme />} />
+        <Route path="/page/pageIntro" element={<PageIntro />} />
+        <Route path="/page/bytheme" element={<ByTheme />} />
         <Route path="/page/byregion" element={<ByRegion />} />
         <Route path="/user" element={<UserGet />} />
         <Route path="/user/update/:id" element={<UserUpdate />} />

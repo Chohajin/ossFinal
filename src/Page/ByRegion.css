@@ -58,7 +58,7 @@
   height: 80vh; /* Adjust height to fit content */
 }
 
-.restaurant-list {
+.restaurant-list-byregion {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -68,8 +68,8 @@
 }
 
 .restaurant-item {
-  flex: 0 0 calc(33.333% - 20px); /* Adjust box width */
-  max-width: calc(33.333% - 20px);
+  flex: 0 0 calc(33.333% - 30px); /* Adjust box width */
+  max-width: calc(33.333% - 30px);
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 12px;
