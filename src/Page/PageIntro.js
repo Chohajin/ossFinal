@@ -3,10 +3,10 @@ import { useNavigate } from 'react-router-dom';
 import './PageIntro.css';
 
 const pages = [
-    { image: "/Images/1.jpg" },
-    { image: "/Images/2.jpg" },
-    { image: "/Images/3.jpg" },
-    { image: "/Images/4.jpg" }
+    { image: "/Images/photo1.jpg" },
+    { image: "/Images/photo2.jpg" },
+    { image: "/Images/photo3.jpg" },
+    { image: "/Images/photo4.jpg" }
 ];
 
 const PageIntro = () => {
