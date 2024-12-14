@@ -19,14 +19,14 @@ export default function Header() {
   return (
     <>
       <header className="header-container">
-        <Link to="/" className="title">
+        <Link to="/home" className="title"> {/* "/home" 경로 반영 */}
           다먹자
         </Link>
         <div className="search-container">
           <form onSubmit={handleSearch}>
             <input
               type="text"
-              placeholder="지역명 또는 음식명을 입력하세요..."
+              placeholder="음식명을 입력하세요..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)} // 검색어 상태 업데이트
             />
@@ -47,16 +47,17 @@ export default function Header() {
         </div>
       </header>
       <nav className="nav">
-        <Link to="/pageIntro" className="nav-link">
-          페이지 소개
-        </Link>
+
         <Link to="/Notice" className="nav-link">
           공지사항
         </Link>
         <Link to="/Page/ByRegion" className="nav-link">
-          부산 맛집 찾기
+          부산 지역별 맛집 찾기
         </Link>
-        <Link to="/faq" className="nav-link">
+        <Link to="/Page/ByTheme" className="nav-link">
+          부산 테마별 맛집 찾기
+        </Link>
+        <Link to="/Faq" className="nav-link">
           FAQ
         </Link>
       </nav>
