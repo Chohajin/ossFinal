@@ -44,8 +44,9 @@ export default function Search() {
     if (query && restaurants.length > 0) {
       const filtered = restaurants.filter((restaurant) =>
         restaurant.MAIN_TITLE?.includes(query) ||
-        restaurant.ITEMCNTNTS?.includes(query) ||
-        restaurant.RPRSNTV_MENU?.includes(query)
+        restaurant.ITEMCNTNTS?.includes(query) || 
+        restaurant.RPRSNTV_MENU?.includes(query) ||
+        restaurant.ADDR1?.includes(query)
       );
       setFilteredResults(filtered);
     }
