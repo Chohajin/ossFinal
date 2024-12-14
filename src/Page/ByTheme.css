@@ -76,6 +76,7 @@
 }
 
 .bytheme-container .restaurant-list {
+  margin-top: 90px;
   width: 82%;
   padding: 30px;
   overflow-y: auto;

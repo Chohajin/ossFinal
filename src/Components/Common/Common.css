@@ -64,16 +64,13 @@ body {
 }
 
 .search-container button:hover {
-  background-color: #45a049;
+  background-color: #c07e04;
 }
 
 .user-login-container {
   display: flex;
-  /* Flexbox 적용 */
   align-items: center;
-  /* 수직 가운데 정렬 */
   gap: 10px;
-  /* 버튼 간 간격 추가 */
 }
 
 .user button,

@@ -1,9 +1,9 @@
 .card {
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
-  /* 기본 스타일 */
+/* 기본 스타일 */
 body, html {
   height: 100%;
   margin: 0;
@@ -22,7 +22,7 @@ body, html {
   padding: 20px;
 }
 
-.notice-head{
+.notice-head {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 20px;
@@ -33,13 +33,14 @@ body, html {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  min-height: 100vh; /* 뷰포트 높이를 채움 */
 }
 
 .notice-item {
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 8px;
-  padding: 20px;
+  padding: 20px 20px 6px 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
