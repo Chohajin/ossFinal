@@ -32,6 +32,8 @@ function App() {
         <Route path="/page/pageIntro" element={<PageIntro />} />
         <Route path="/page/bytheme" element={<ByTheme />} />
         <Route path="/page/byregion" element={<ByRegion />} />
+        <Route path="/by-theme" element={<ByTheme />} />
+        <Route path="/by-region" element={<ByRegion />} />
         <Route path="/user" element={<UserGet />} />
         <Route path="/user/update/:id" element={<UserUpdate />} />
       </Routes>
